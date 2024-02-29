@@ -4,7 +4,7 @@ import GetStarted from "./GetStarted";
 import styles from "../style";
 import PaymentCard from "./Payment";
 import { motion } from "framer-motion";
-
+import {checkout} from '../../../checkout'
 const fadeInLeft = {
   hidden: { opacity: 0, x: -150 },
   visible: {
@@ -53,11 +53,21 @@ const Hero = () => (
         variants={fadeInLeft}
         className="flex flex-row items-center py-[6px] px-4 bg-discount-gradient rounded-md mb-2"
       >
+      
         <p className={`${styles.paragraph} text-xs ml-2`}>
           <span className="text-dimWhite">$120/ week</span>{" "}
           <span className="text-dimWhite">
             for expert-led sessions.{" "}
-            <span className="text-white">Join Now!</span>
+            <span className="text-white" onClick={(() => {
+              checkout({
+                lineItems: [
+                  {
+                    price: "price_1OosQIHrkKkcZaV4nHboVoxX",
+                    quantity: 1
+                  }
+                ]
+              })
+            })}>Join Now!</span>
           </span>
         </p>
       </motion.div>
