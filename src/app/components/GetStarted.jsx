@@ -2,11 +2,21 @@ import React from "react";
 import styles from "../style";
 import { arrowUp } from "../../assets";
 import Image from "next/image";
+import { checkout } from "../../../checkout";
 
 const GetStarted = () => (
   <div
     className={`${styles.flexCenter} w-[140px] h-[140px] rounded-full bg-blue-gradient p-1 cursor-pointer`}
-  >
+    onClick={(() => {
+              checkout({
+                lineItems: [
+                  {
+                    price: "price_1Op4XOHrkKkcZaV47J3J3ngK",
+                    quantity: 1
+                  }
+                ]
+              })
+            })}  >
     <div
       className={`${styles.flexCenter} flex-col bg-primary w-full h-full rounded-full`}
     >

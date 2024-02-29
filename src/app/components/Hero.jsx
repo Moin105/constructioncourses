@@ -62,7 +62,7 @@ const Hero = () => (
               checkout({
                 lineItems: [
                   {
-                    price: "price_1OosQIHrkKkcZaV4nHboVoxX",
+                    price: "price_1Op4TCHrkKkcZaV4exGqHG2A",
                     quantity: 1
                   }
                 ]
@@ -118,7 +118,7 @@ const Hero = () => (
         variants={fadeInRight}
         className="z-[3] flex justify-center items-center w-full"
       >
-        <PaymentCard />
+        {/* <PaymentCard /> */}
       </motion.div>
 
       <div className="absolute top-0 z-[0] w-[35%] h-[35%] pink__gradient " />
